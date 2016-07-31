@@ -1,0 +1,27 @@
+galaxy_info:
+  author: Simon Oulevay (Alpha Hydrae)
+  description: Adds Bitbucket to SSH known hosts.
+  license: MIT
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - bitbucket
+    - ssh
+
+dependencies:
+  - role: AlphaHydrae.ssh-known-host
+    ssh_known_hosts:
+      - host: bitbucket.org
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAubiN81eDcafrgMeLzaFPsw2kNvEcqTKl/VqLat/MaB33pZy0y3rJZtnqwR2qOOvbwKZYKiEO1O6VqNEBxKvJJelCq0dTXWT5pbO2gDXC6h6QDXCaHo6pOHGPUy+YBaGQRGuSusMEASYiWunYN0vCAI8QaXnWMXNMdFP3jHAJH0eDsoiGnLPBlBp4TNm6rYI74nMzgz3B9IikW4WVK+dc8KZJZWYjAuORU3jc1c/NPskD2ASinf8v3xnfXeukU0sJ5N6m5E8VLjObPEO+mN2t/FZTMZLiFqPWc/ALSqnMnnhwrNi2rbfg/rd/IpL8Le3pSBne8+seeFVBoGqzHM9yXw==
+    ssh_known_host_root: true
